@@ -27,10 +27,10 @@
         if (toggleTo == 0 || toggleTo == 1){
             switch(toggleEn) {
                 case 0:
-                    Serial.println("step step 1");
+                    Serial.println("sensor modus 1");
                     break;
                 case 1:
-                    Serial.println("steg step 2");
+                    Serial.println("sensor modus 2");
                     break;
             }
         }  
@@ -53,13 +53,13 @@
         }
         switch(toggleTo) {
             case 0:
-                Serial.print("step 1");
+                Serial.print("case 1");
                 break;
             case 1:
-                Serial.print("steg 2");
+                Serial.print("case 2");
                 break;
             case 2:
-                Serial.print("steg 3");
+                Serial.print("case 3");
                 break;
         }
     }
