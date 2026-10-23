@@ -85,14 +85,14 @@ void loop() {
     }
 }
 
-void SensorA_bootup()
+void SensorA_bootup(){
   digitalWrite(trigA_pin,LOW);
   delay(20);
   digitalWrite(trigA_pin,HIGH);
-  delay(10)
+  delay(10);
   digitalWrite(trigA_pin,LOW);
   SensorA();
-
+}
 void SensorA() {
   digitalWrite(trigA_pin,LOW);
   delay(20);
@@ -102,7 +102,7 @@ void SensorA() {
 
   durationA = pulseIn(echoA_pin,HIGH);
   distanceA = (durationA * 0.0343) / 2;
-  Serial.println("Avstand:");
+  Serial.println("Avstand A:");
   Serial.println(distanceA);
   delay(100);
 }
@@ -111,7 +111,7 @@ void SensorB_bootup() {
   digitalWrite(trigB_pin,LOW);
   delay(20);
   digitalWrite(trigB_pin,HIGH);
-  delay(10)
+  delay(10);
   digitalWrite(trigB_pin,LOW);
 
   SensorB();
@@ -119,9 +119,8 @@ void SensorB_bootup() {
 
 void SensorB() {
    durationB = pulseIn(echoB_pin,HIGH);
-   distanceB = (duration * 0.0343) / 2;
-   Serial.println("Avstand:");
+   distanceB = (durationB * 0.0343) / 2;
+   Serial.println("Avstand B:");
   Serial.println(distanceB);
   delay(100);
 }
-
