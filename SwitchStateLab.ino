@@ -10,3 +10,5 @@ void loop() {
 // start med git add .
 // got commit -m "kommentar"
 // git push -u origin main
+
+const int 111
