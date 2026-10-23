@@ -22,7 +22,7 @@ void setup() {
 
 void loop() {
   SensorA_bootup(); //legges i if sløyfe
-  SensorB(); //legges i if sløyfe
+  SensorB_bootup(); //legges i if sløyfe
 }
 void SensorA_bootup()
   digitalWrite(trigA_pin,LOW);
