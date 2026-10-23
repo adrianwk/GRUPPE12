@@ -9,6 +9,12 @@ const int echoB_pin = 12;
 float durationA, distanceA;
 float durationB, distanceB;
 
+//Gjennomsnittsmålinger
+float gjennomsnittA;
+float gjennomsnittB;
+
+
+
 //Knapper 
 const int knappEn = 8;
   const int knappTo = 7;
@@ -40,10 +46,10 @@ void loop() {
     if (toggleTo == 0 || toggleTo == 1){
         switch(toggleEn) {
             case 0:
-                Serial.println("step step 1");
+                Serial.println("sensor modus 1");
                 break;
             case 1:
-                Serial.println("steg step 2");
+                Serial.println("sensor modus 2");
                 break;
         }
     }  
@@ -66,15 +72,15 @@ void loop() {
     }
     switch(toggleTo) {
         case 0:
-            Serial.print("step 1");
+            Serial.print("case 1");
             SensorA_bootup();
             break;
         case 1:
-            Serial.print("steg 2");
+            Serial.print("case 2");
             SensorB_bootup();
             break;
         case 2:
-            Serial.print("steg 3");
+            Serial.print("case 3");
             break;
     }
 }
