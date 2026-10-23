@@ -1,18 +1,26 @@
 #include <Arduino.h>
 
-// put function declarations here:
-int myFunction(int, int);
+int SensorA_data;
+int SensorA_pin = A0;
+int SensorB_data;
+int SensorB_pin = A1;
+
 
 void setup() {
-  // put your setup code here, to run once:
-  int result = myFunction(2, 3);
+Serial.begin(9600);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+SensorA();
+SensorB();
+
+}
+void SensorA() {
+    SensorA_data = analogRead(SensorA_pin);
+    Serial.println(SensorA_data);
 }
 
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
+void SensorB() {
+    SensorB_data = analogRead(SensorB_pin);
+    Serial.println(SensorB_pin);
 }
